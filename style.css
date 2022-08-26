@@ -1,59 +1,49 @@
+
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
-html{
-    font-size: 10px;
-}
-
-.img-content{
+.container{
+    width: 80%;
+    min-width: 400px;
+    margin: 100px auto ;
+    background-color: aqua;
+    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
+    /* align-items: center; */
     justify-content: center;
-    width: 90%;
-    margin: auto;
-    padding: 80px;
-    margin-top: 100px;
-    background-color:rgb(244,244,244)
 }
+.right-text{
+    transform: rotate(90deg) translate(-175px,-95px); /*! 90 derece döndürdüğümüz içi translate de x ve y yer değiştirdi.*/
+    z-index: 2;
+    font-size: 0.8rem;
+}
+
 .img-wrapper{
     width: 200px;
     height: 300px;
-    margin: 10px 15px;
-}
-
-.img-wrapper:nth-of-type(odd){
-    padding-top: 30px;
+    margin: 30px;
 }
 .img-frame{
-    width: 180px;
-    height:270px;
-    position: relative;
+    /* position: relative; */
+    width: 190px;
+    height: 270px;
+    transition: all ease-in-out 0.5s;
+}
+.img-wrapper:nth-of-type(even){
+    padding-top: 30px;
 }
 .member-photo{
-    width: 88%;
+    width: 180px;
     height: auto;
-    /* margin-right: 3px; */
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     border-radius: 5px;
-    box-shadow: -1px -1px 5px -1px;
+    box-shadow: -5px 5px 5px 1px rgb(122, 121, 121);
+
 }
 
-
-.text-right{
-    position: absolute;
-    right: 0;
-    top: 8px;
-    transform: rotate(90deg);
-    z-index: 2;
-    /* margin-left: 3px; */
-}
-
-.text-bottom{
-    font-size: 1.5rem;
+.img-frame:hover{
+    transform: scale(1.2);
 }
